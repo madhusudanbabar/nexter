@@ -1,0 +1,32 @@
+// method 1 LINE NUMBERS
+.grid{
+    margin: 30px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-rows: 100px 200px 400px 100px; 
+    grid-template-columns: repeat(3, 1fr) 100px;
+    grid-gap: 30px;
+    color: peachpuff;
+    font-family: sans-serif;
+    font-size: 19px;
+
+    & > * {
+        background-color: orangered;
+    }
+
+    &__item--1{
+        grid-area: 1 / 1 / 2 / -1;
+    }
+
+    &__item--5{
+        grid-area: 2 / 4 / -2 / -1; 
+    }
+
+    &__item--6{
+        grid-area: 3 / 1 / -2 / -2;
+    }
+
+    &__item--7{
+        grid-area: -2 / 1 / -1 / -1;
+    }
+}
